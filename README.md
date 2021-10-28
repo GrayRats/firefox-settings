@@ -139,3 +139,17 @@ Firefox advanced settings for increased privacy and security.
 
 
     gfx.webrender.all = true // New GPU renderer written in Rust - Experimental
+    
+    
+    
+
+Ниже приведены ресурсы с дополнительной информацией по настройке Firefox для обеспечения высокого уровня приватности и защиты:
+
+js Firefox hardening https://github.com/ghacksuserjs/ghacks-user.js. Как написано на их странице GitHub,
+   это «файл конфигурации, который поможет управлять сотнями настроек 
+   Firefox». Для получения более подробной информации о нем вы можете 
+   перейти по данной   ссылке https://github.com/ghacksuserjs/ghacks-user.js/wiki.
+Privacy Settings addons.mozilla.org/firefox/addon/privacy-settings/.
+  Это дополнение Firefox, которое предоставляет вам легкий доступ и 
+  контроль над встроенными настройками конфиденциальности в браузере.
+Firefox Profilemaker https://ffprofile.com/. FFprofile поможет вам создать профиль Firefox с настройками конфиденциальности и безопасности в соответствии с вашими потребностями.
