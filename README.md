@@ -150,7 +150,7 @@ js Firefox hardening https://github.com/ghacksuserjs/ghacks-user.js. Как на
  Firefox». Для получения более подробной информации о нем вы можете 
  перейти по данной  ссылке https://github.com/ghacksuserjs/ghacks-user.js/wiki.
    
-Privacy Settings /addons.mozilla.org/firefox/addon/privacy-settings/.
+Privacy Settings https://addons.mozilla.org/firefox/addon/privacy-settings/.
 Это дополнение Firefox, которое предоставляет вам легкий доступ и 
 контроль над встроенными настройками конфиденциальности в браузере.
   
