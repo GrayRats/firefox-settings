@@ -21,8 +21,10 @@ Firefox advanced settings for increased privacy and security.
 
 ## SSL/TLS
 
-    // Disable TLS 1.0 and TLS 1.1
+    // Disable TLS 1.0 and TLS 1.1 
     security.tls.version.min = 3
+    // ON TLS 1.2 and TLS 1.3
+    security.tls.version.max = 4
     
     // Enable TLS Delegated Credentials
     security.tls.enable_delegated_credentials = true
@@ -34,9 +36,9 @@ Firefox advanced settings for increased privacy and security.
     security.ssl3.dhe_rsa_aes_256_sha = false
     security.ssl3.ecdhe_rsa_aes_128_sha = false
     security.ssl3.ecdhe_rsa_aes_256_sha = false
-    security.ssl3.rsa_aes_128_gcm_sha256 = false
+    security.ssl3.rsa_aes_128_gcm_sha256 = true
     security.ssl3.rsa_aes_128_sha = false
-    security.ssl3.rsa_aes_256_gcm_sha384 = false
+    security.ssl3.rsa_aes_256_gcm_sha384 = true
     security.ssl3.rsa_aes_256_sha = false
     security.ssl3.rsa_des_ede3_sha = false
 
