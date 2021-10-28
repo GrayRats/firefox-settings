@@ -32,17 +32,12 @@ Firefox advanced settings for increased privacy and security.
     security.tls.enable_delegated_credentials = true
 
     // Disable Weak Ciphersuites
-    security.ssl3.ecdhe_ecdsa_aes_128_sha = false
-    security.ssl3.ecdhe_ecdsa_aes_256_sha = false
-    security.ssl3.dhe_rsa_aes_128_sha = false
-    security.ssl3.dhe_rsa_aes_256_sha = false
-    security.ssl3.ecdhe_rsa_aes_128_sha = false
-    security.ssl3.ecdhe_rsa_aes_256_sha = false
-    security.ssl3.rsa_aes_128_gcm_sha256 = true
-    security.ssl3.rsa_aes_128_sha = false
-    security.ssl3.rsa_aes_256_gcm_sha384 = true
-    security.ssl3.rsa_aes_256_sha = false
-    security.ssl3.rsa_des_ede3_sha = false
+    // 7.6 Блокировка алгоритма SHA1
+    // Возможные значения 0=Все SHA1 сертификаты разрешены 1=Все SHA1 заблокированы
+    // 3=Разрешены только локальные сертификаты, например, установленные антивирусами
+    // 4=Разрешены локальные + подписанные в 2015 году или ранее
+    user_pref("security.pki.sha1_enforcement_level", 1);
+
 
     // Disable OCSP
     security.OCSP.enabled = 0
@@ -54,6 +49,19 @@ Firefox advanced settings for increased privacy and security.
     // Enable Encrypted Client Hello (ECH/ESNI)
     network.dns.echconfig.enabled = true
     network.dns.use_https_rr_as_altsvc = true
+    // 7.4 Проверка валидности OCSP через обращение к удостоверяющему центру
+
+    // Значения: 0=Отключено, 1=Включено (по-умолчанию), 2=Только для сайтов с EV сертификатом
+
+    // (!)Данная настройка снижает вашу анонимность, но необходима для безопасности
+    user_pref("security.OCSP.enabled", 1);
+    // 7.5 Сайты не будут загружаться без получения подтверждения через OCSP
+    // (!!!) Настройка очень полезна для повышения уровня безопасности, но 
+    // часто ломает DNS over HTTPS в портативных и стабильных версиях Firefox
+    // Включайте самостоятельно, смотрите, как будет работать лично у вас
+    //user_pref("security.OCSP.require", true);
+
+
 
 ## Sandbox
 
@@ -118,7 +126,8 @@ Firefox advanced settings for increased privacy and security.
     browser.newtabpage.activity-stream.feeds.telemetry = false
     browser.newtabpage.activity-stream.telemetry = false
     dom.event.clipboardevents.enabled =  false
-
+    // Disable stat collection
+    media.video_stats.enabled = false
 
 ## Disable Pocket
 
@@ -171,10 +180,14 @@ Firefox advanced settings for increased privacy and security.
     //Send fake referrer (if choose to send referrers)maybe Error Site
     
     network.http.sendRefererHeader = 0 [if 2-3,Breaks Websites]
-	Tells website where you came from. Disabling may break some sites.
-	0 = Disable referrer headers. 
-	1 = Send only on clicked links.
-	2 = (default) Send for links and image. 
+	// Tells website where you came from. Disabling may break some sites.
+	// 0 = Disable referrer headers. 
+	// 1 = Send only on clicked links.
+	// 2 = (default) Send for links and image. 
+    browser.newtabpage.activity-stream.section.highlights.rows = 6
+    browser.newtabpage.activity-stream.section.topstories.rows = 1
+    browser.newtabpage.activity-stream.topSitesRows = 5
+    ///
     browser.aboutConfig.showWarning // No need to warn us
     browser.fullscreen.autohid = false //
     browser.tabs.closeWindowWithLastTab = false //closes the browser when the last tab is closed
@@ -189,8 +202,6 @@ Firefox advanced settings for increased privacy and security.
     
     // experimental firefoxSuggestLabels
     browser.urlbar.experimental.firefoxSuggestLabels.enabled
-    
-    ////
     // Firefox_UrlBar_Suggest
     browser.urlbar.decodeURLsOnCopy
     browser.urlbar.
@@ -248,7 +259,7 @@ Firefox advanced settings for increased privacy and security.
     gfx.webrender.all = true  //New GPU renderer written in Rust - [Beta]
       // 1.2 Первичная отрисовка "скелета" интерфейса до реального отображения окна браузера 
       // https://www.ghacks.net/2021/01/25/firefox-nightly-uses-a-new-skeleton-ui-on-start-on-windows/
-    browser.startup.preXulSkeletonUI = false
+    browser.startup.preXulSkeletonUI = true
 
 ## MEMORY REDUCTION 
     browser.cache.memory.capacity = xx
@@ -266,6 +277,7 @@ Firefox advanced settings for increased privacy and security.
 	
     config.trim_on_minimize = true
 	//Reduce memory usage when minimized. (Windows only)
+    dom.animations.offscreen-throttling = false
 	
     image.mem.max_decoded_image_kb = xx
 	//How much info Firefox stores of uncompressed images.
@@ -278,7 +290,7 @@ Firefox advanced settings for increased privacy and security.
     javascript.options.mem.high_water_mark == xx
 	//Tell garbage collector to start running when javascript is using xx MB of memory. 
 	//Garbage collection releases memory back to the system.
-
+ 
 
 
 Ниже приведены ресурсы с дополнительной информацией по настройке Firefox для обеспечения высокого уровня приватности и защиты:
@@ -298,3 +310,12 @@ Firefox Profilemaker https://ffprofile.com/.FFprofile поможет вам со
 /Фишки
 Отсоединить вкладку, перетащив ее из окна 
 browser.tabs.allowTabDetach = true
+
+user.js
+user_pref("browser.proton.doorhangers.enabled", true);
+user_pref("browser.proton.infobars.enabled", true);
+user_pref("browser.proton.places-tooltip.enabled", true);
+user_pref("browser.proton.urlbar.enabled", true);
+user_pref("browser.startup.blankWindow", false);
+user_pref("browser.startup.preXulSkeletonUI", true);
+user_pref("browser.uidensity", 2);
