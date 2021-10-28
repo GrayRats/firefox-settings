@@ -8,7 +8,9 @@ Firefox advanced settings for increased privacy and security.
     network.trr.mode = 3
 
     network.trr.uri = https://dns.east.comss.one/dns-query // Use your prefered DoH server
+## WIKI DNS-over-HTTPS - https://GitHub.com/curl/curl/wiki/DNS-over-HTTPS and https://www.comss.ru/list.php?c=securedns ,TEST DOH https://www.cloudflare.com/ssl/encrypted-sni/
     network.trr.useGET = true
+    network.security.esni.enabled = true
 
 ## Enable HTTPS-Only Mode
 
@@ -88,11 +90,13 @@ Firefox advanced settings for increased privacy and security.
     privacy.trackingprotection.socialtracking.enabled = true
     privacy.socialtracking.block_cookies.enabled = true
     privacy.firstparty.isolate = true
-    privacy.donottrackheader.enabled = true  //,посылать заголовок «do not track
-    network.http.sendRefererHeader = 0       //,«http-заголовок»
-    //    0 – никогда не отсылать HTTP-referer
+    privacy.donottrackheader.enabled = true  //посылать заголовок «do not track»
+    network.http.sendRefererHeader = 0       //[Not Recommended]
+    //    0 – никогда не отсылать HTTP-referer ?=скрывает «http-заголовок» 
     //    1 – отсылать только по кликнутым ссылкам
     //    2 – отсылать для ссылок и картинок (по умолчанию)
+    privacy.resistFingerprinting = true //от отслеживания дактилоскопия браузера [Not Recommended]
+    
 
 ## Disable Telemetry
 
@@ -104,11 +108,12 @@ Firefox advanced settings for increased privacy and security.
     toolkit.telemetry.updatePing.enabled = false
     toolkit.telemetry.newProfilePing.enabled = false
     toolkit.telemetry.bhrPing.enabled = false
+    toolkit.telemetry.debugSlowSql = false
     browser.ping-centre.telemetry = false
     browser.send_pings = false
-    // Prevent website tracking clicks.
+    //Prevent website tracking clicks.
     browser.send_pings.require_same_host = true
-    // Only send pings if send and receiving host match (same website).
+    //Only send pings if send and receiving host match (same website).
     
     browser.newtabpage.activity-stream.feeds.telemetry = false
     browser.newtabpage.activity-stream.telemetry = false
@@ -135,45 +140,66 @@ Firefox advanced settings for increased privacy and security.
     pdfjs.enableScripting = false    // Disable Javascript on PDF files
     geo.enabled = false              // Disable Geolocation
     dom.battery.enabled = false      // Disable Battery Status API
-
+    browser.urlbar.trimURL = true 
     network.dns.disablePrefetch = true  //Установив значение «True» для данного параметра, запрет на «предварительную выборку» DNS.
 
     network.prefetch-next = false  
 
        //Аналогично предварительная выборка DNS от Mozilla.
-    
+       
+    media.peerconnection.enabled = false //(WebRTC) [Not Recommended]
     network.websocket.enabled = false
-       //   WebSockets is a technology that makes it possible to open an interactive communication 
-       //   session between the user's browser and a server. (May leak IP when using proxy/VPN)
+    //WebSockets is a technology that makes it possible to open an interactive communication 
+    //session between the user's browser and a server. (May leak IP when using proxy/VPN)
     
     browser.cache.offline.enable = false
-       //    Disables offline cache.
+    //Disables offline cache.
     network.dns.disableIPv6 = true
-       //If your OS or ISP does not support IPv6, there is no reason to have this preference set to false.
+    //If your OS or ISP does not support IPv6, there is no reason to have this preference set to false.
     browser.cache.disk_cache_ssl = false
-       //Disables caching for ssl connections. [Don't Recommend]
+    //Disables caching for ssl connections.[Don't Recommend]
     dom.event.contextmenu.enabled = false
-       //Don't allow websites to prevent use of right-click, 
-       //or otherwise messing with the context menu.
+    //Don't allow websites to prevent use of right-click, 
+    //or otherwise messing with the context menu.
     network.dnsCacheEntries = 100
-       //Number of cached DNS entries. Lower number = More requests but less data stored.
+    //Number of cached DNS entries. Lower number = More requests but less data stored.
     network.dnsCacheExpiration = 60
-       //Time DNS entries are cached in seconds.   
+    //Time DNS entries are cached in seconds.   
     Network.http.sendSecureXSiteReferrer = false
-       //    Disable referrer headers between https websites.
+    //Disable referrer headers between https websites.
     Network.http.referer.spoofSource = true
-       //    Send fake referrer (if choose to send referrers).
+    //Send fake referrer (if choose to send referrers)maybe Error Site
     
     network.http.sendRefererHeader = 0 [if 2-3,Breaks Websites]
 	Tells website where you came from. Disabling may break some sites.
 	0 = Disable referrer headers. 
 	1 = Send only on clicked links.
-	2 = (default) Send for links and image.    
+	2 = (default) Send for links and image. 
+    browser.aboutConfig.showWarning // No need to warn us
+    browser.fullscreen.autohid = false //
+    browser.tabs.closeWindowWithLastTab = false //closes the browser when the last tab is closed
+    browser.tabs.warnOnClose = true
+    dom.disable_beforeunload = true
+    browser.urlbar.openintab = false
+    browser.urlbar.suggest.calculator = true
+    browser.urlbar.quicksuggest.sponsoredIndex = 0
+    browser.urlbar.openintab = true //В новой вкладке
+    browser.urlbar.decodeURLsOnCopy = true
+    browser.urlbar.ctrlCanonizesURLs = false
+    
+    // experimental firefoxSuggestLabels
+    browser.urlbar.experimental.firefoxSuggestLabels.enabled
+    
+    ////
+    // Firefox_UrlBar_Suggest
+    browser.urlbar.decodeURLsOnCopy
+    browser.urlbar.
+    browser.urlbar.quicksuggest.enabled = false //
+    browser.urlbar.eventTelemetry.enabled = false
+    browser.urlbar.groupLabels.enabled = True //Firefox Suggest thing..? 
 
 ##  Google
     browser.safebrowsing.enabled = false
-    browser.safebrowsing.phishing.enabled = false
-    browser.safebrowsing.malware.enabled = false
     browser.safebrowsing.downloads.enabled = false
     browser.safebrowsing.provider.google4.dataSharing.enabled = blank
     browser.safebrowsing.provider.google4.updateURL = blank
@@ -201,6 +227,10 @@ Firefox advanced settings for increased privacy and security.
     //Note: this list may be incomplete as firefox updates, be sure to search for browser.safebrowsing.provider.google*
     //Also simply setting safebrowsing.*.enabled to false should make setting the URL's to blank redundant, but better to be safe.
     //If you see anything pointing google, probably best to nuke it.
+    safebrowsing.phishing.enabled = false //[Not Recommended]
+    safebrowsing.malware.enabled = false  
+    //При поиске определенного URL-адреса Firefox принимает следующие меры предосторожности для защиты конфиденциальности пользователей.
+    //Настрока отключает защиту. 
 ## PERFORMANCE
     layout.frame_rate.precise = true
        //Increases animation speed. May mitigate choppy scrolling.
@@ -211,11 +241,15 @@ Firefox advanced settings for increased privacy and security.
     layers.offmainthreadcomposition.async-animations = true
     layers.async-video.enabled = true
     html5.offmainthread = true
-       //Enable Hardware Acceleration and Off Main Thread Compositing (OMTC).
-       //It's likely your browser is already set to use these features.
-       //May introduce instability on some hardware.
+      //Enable Hardware Acceleration and Off Main Thread Compositing (OMTC).
+      //It's likely your browser is already set to use these features.
+      //May introduce instability on some hardware.
     webgl.disabled = true 
     gfx.webrender.all = true  //New GPU renderer written in Rust - [Beta]
+      // 1.2 Первичная отрисовка "скелета" интерфейса до реального отображения окна браузера 
+      // https://www.ghacks.net/2021/01/25/firefox-nightly-uses-a-new-skeleton-ui-on-start-on-windows/
+    browser.startup.preXulSkeletonUI = false
+
 ## MEMORY REDUCTION 
     browser.cache.memory.capacity = xx
 	//Limit memory cache size. (xx = value in MB)
@@ -226,7 +260,7 @@ Firefox advanced settings for increased privacy and security.
     browser.sessionstore.max_tabs_undo = xx
 	//Limit max closed tabs you can reopen.
 	
-    browser.tabs.animate = false
+    browser.tabs.animate = true
     browser.download.animateNotifications = false
 	//Disable some animations.
 	
@@ -261,6 +295,6 @@ Privacy Settings https://addons.mozilla.org/firefox/addon/privacy-settings/.
   
 Firefox Profilemaker https://ffprofile.com/.FFprofile поможет вам создать профиль Firefox с настройками конфиденциальности и безопасности в соответствии с вашими потребностями.
 
-
+/Фишки
 Отсоединить вкладку, перетащив ее из окна 
 browser.tabs.allowTabDetach = true
