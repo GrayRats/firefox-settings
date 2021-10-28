@@ -7,7 +7,7 @@ Firefox advanced settings for increased privacy and security.
     // Use DoH without fallback to insecure DNS
     network.trr.mode = 3
 
-    network.trr.uri = https://dns.paesa.es/dns-query // Use your prefered DoH server
+    network.trr.uri = https://dns.east.comss.one/dns-query // Use your prefered DoH server
     network.trr.useGET = true
 
 ## Enable HTTPS-Only Mode
@@ -56,7 +56,7 @@ Firefox advanced settings for increased privacy and security.
     // Enable Site Isolation
     fission.autostart = true
 
-    // Windows only process hardening - Experimental
+    // Windows only process hardening - Experimental (2021)
     security.sandbox.content.win32k-disable = true
     security.sandbox.gmp.win32k-disable = true
     security.sandbox.content.shadow-stack.enabled = true
@@ -64,14 +64,19 @@ Firefox advanced settings for increased privacy and security.
     security.sandbox.gpu.shadow-stack.enabled = true
     security.sandbox.gpu.level = 1
 
-## Resist Fingerprinting
+## Resist Fingerprinting «Отпечаток браузера»
 
     privacy.resistFingerprinting = true
     privacy.spoof_english = 2
 
 ## Reject Third-Party Cookies
 
-    network.cookie.cookieBehavior = 1
+    network.cookie.cookieBehavior = 4
+    //  0 = принимать все файлы Cookie по умолчанию.
+    //  1 = принимать файлы Cookie только от определенного сайта (блокировать сторонние файлы Cookie)
+    //  2 = блокировать все файлы Cookie по умолчанию
+    //  3 = блокировать файлы Cookie от ранее не знакомых сайтов
+    //  4 = новая политика хранения файлов Cookie (предотвращение доступа к хранилищу для трекеров)
 
 ## Tracking Protection
 
@@ -81,8 +86,11 @@ Firefox advanced settings for increased privacy and security.
     privacy.trackingprotection.socialtracking.enabled = true
     privacy.socialtracking.block_cookies.enabled = true
     privacy.firstparty.isolate = true
-    privacy.donottrackheader.enabled = true
-    network.http.sendRefererHeader = 0
+    privacy.donottrackheader.enabled = true  //,посылать заголовок «do not track
+    network.http.sendRefererHeader = 0       //,«http-заголовок»
+    //    0 – никогда не отсылать HTTP-referer
+    //    1 – отсылать только по кликнутым ссылкам
+    //    2 – отсылать для ссылок и картинок (по умолчанию)
 
 ## Disable Telemetry
 
@@ -97,6 +105,8 @@ Firefox advanced settings for increased privacy and security.
     browser.ping-centre.telemetry = false
     browser.newtabpage.activity-stream.feeds.telemetry = false
     browser.newtabpage.activity-stream.telemetry = false
+    dom.event.clipboardevents.enabled =  false
+
 
 ## Disable Pocket
 
@@ -111,7 +121,7 @@ Firefox advanced settings for increased privacy and security.
 ## Disable Disk Persistence
 
     browser.cache.disk.enable = false
-    browser.privatebrowsing.forceMediaMemoryCache = true
+    browser.privatebrowsing.forceMediaMemoryCache = true  //disable disk caching of video in private browsing mode.
 
 ## Others
 
@@ -119,7 +129,13 @@ Firefox advanced settings for increased privacy and security.
     geo.enabled = false              // Disable Geolocation
     dom.battery.enabled = false      // Disable Battery Status API
 
-    network.dns.disablePrefetch = true
-    network.prefetch-next = false
+    network.dns.disablePrefetch = true  //Установив значение «True» для данного параметра, запрет на «предварительную выборку» DNS.
+
+    network.prefetch-next = false  
+
+    //Аналогично предварительной выборке DNS от Mozilla.
     
+        webgl.disabled = true 
+
+
     gfx.webrender.all = true // New GPU renderer written in Rust - Experimental
