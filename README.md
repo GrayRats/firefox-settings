@@ -315,15 +315,14 @@ Privacy Settings https://addons.mozilla.org/firefox/addon/privacy-settings/.
   
 Firefox Profilemaker https://ffprofile.com/.FFprofile поможет вам создать профиль Firefox с настройками конфиденциальности и безопасности в соответствии с вашими потребностями.
 
-/Фишки
-Отсоединить вкладку, перетащив ее из окна 
-browser.tabs.allowTabDetach = true
-
-user.js
-user_pref("browser.proton.doorhangers.enabled", true);
-user_pref("browser.proton.infobars.enabled", true);
-user_pref("browser.proton.places-tooltip.enabled", true);
-user_pref("browser.proton.urlbar.enabled", true);
-user_pref("browser.startup.blankWindow", false);
-user_pref("browser.startup.preXulSkeletonUI", true);
-user_pref("browser.uidensity", 2);
+// Фишки
+// Отсоединить вкладку, перетащив ее из окна 
+   user_pref( "browser.tabs.allowTabDetach", true);
+///
+   user_pref("browser.proton.doorhangers.enabled", true);
+   user_pref("browser.proton.infobars.enabled", true);
+   user_pref("browser.proton.places-tooltip.enabled", true);
+   user_pref("browser.proton.urlbar.enabled", true);
+   user_pref("browser.startup.blankWindow", false);
+   user_pref("browser.startup.preXulSkeletonUI", true);
+   user_pref("browser.uidensity", 2);
