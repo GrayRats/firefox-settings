@@ -2,6 +2,14 @@
 
 Firefox advanced settings for increased privacy and security.
 
+(!) Be careful.
+ 
+Changing some settings can drastically change the format of  web browsing pages and lead to an error when loading some  websites. 
+Thus, step-by-step changes to settings - is the best approach to modifying the browser. 
+You can continue  to install add-ons and change parameters as you make sure that past modifications have taken effect and are working correctly. 
+
+It is possible to add sites to the list of exceptions – the plugins you installed will not be used on them.
+
 ## Configure DNS over HTTPS
 
     // Use DoH without fallback to insecure DNS
