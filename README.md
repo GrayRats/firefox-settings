@@ -268,7 +268,10 @@ It is possible to add sites to the list of exceptions – the plugins you instal
       // 1.2 Первичная отрисовка "скелета" интерфейса до реального отображения окна браузера 
       // https://www.ghacks.net/2021/01/25/firefox-nightly-uses-a-new-skeleton-ui-on-start-on-windows/
     browser.startup.preXulSkeletonUI = true
-
+     // Ленивая загрузка ранее открытых вкладок после перезапуска браузера
+     browser.sessionstore.restore_on_demand = true 
+     // true - загружается только активная вкладка, остальные вкладки загружаются по мере их открытия пользователем
+     // false - все вкладки загружаются одновременно после запуска браузера
 ## MEMORY REDUCTION 
     browser.cache.memory.capacity = xx
 	//Limit memory cache size. (xx = value in MB)
