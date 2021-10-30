@@ -13,17 +13,17 @@ It is possible to add sites to the list of exceptions – the plugins you instal
 ## Configure DNS over HTTPS
 
     // Use DoH without fallback to insecure DNS
-    network.trr.mode = 3
+    network.trr.mode → 3
 
     network.trr.uri = https://dns.east.comss.one/dns-query // Use your prefered DoH server
 ## WIKI DNS-over-HTTPS - https://GitHub.com/curl/curl/wiki/DNS-over-HTTPS and https://www.comss.ru/list.php?c=securedns ,TEST DOH https://www.cloudflare.com/ssl/encrypted-sni/
-    network.trr.useGET = true
-    network.security.esni.enabled = true
+    network.trr.useGET → true
+    network.security.esni.enabled → true
 
 ## Enable HTTPS-Only Mode
 
-    dom.security.https_only_mode = true
-    dom.security.https_only_mode_ever_enabled = true
+    dom.security.https_only_mode → true
+    dom.security.https_only_mode_ever_enabled → true
 
 ## Enable HTTP3/QUIC
 
@@ -216,6 +216,11 @@ It is possible to add sites to the list of exceptions – the plugins you instal
     browser.urlbar.quicksuggest.enabled = false //
     browser.urlbar.eventTelemetry.enabled = false
     browser.urlbar.groupLabels.enabled = True //Firefox Suggest thing..? 
+    // CHANGE MODE TO COMPACT:
+    browser.uidensity → 1 
+    //не открывается меню по кнопке Alt.
+    ui.key.menuAccessKey → 0
+    ui.key.menuAccessKeyFocuses → false
 
 ##  Google
     browser.safebrowsing.enabled = false
@@ -317,10 +322,8 @@ Privacy Settings https://addons.mozilla.org/firefox/addon/privacy-settings/.
 контроль над встроенными настройками конфиденциальности в браузере.
   
 Firefox Profilemaker https://ffprofile.com/.FFprofile поможет вам создать профиль Firefox с настройками конфиденциальности и безопасности в соответствии с вашими потребностями.
-
-// Фишки
 // Отсоединить вкладку, перетащив ее из окна/Detach a tab by dragging it out of the window 
-   user_pref( "browser.tabs.allowTabDetach", true);
+  user_pref( "browser.tabs.allowTabDetach", true);
 ///
    user_pref("browser.proton.doorhangers.enabled", true);
    user_pref("browser.proton.infobars.enabled", true);
