@@ -277,6 +277,7 @@ It is possible to add sites to the list of exceptions – the plugins you instal
      browser.sessionstore.restore_on_demand = true 
      // true - загружается только активная вкладка, остальные вкладки загружаются по мере их открытия пользователем
      // false - все вкладки загружаются одновременно после запуска браузера
+    установить network.process.enabled = true //Remote processes.Обращение к сети будет вынесено в отдельный процесс ,как следствие, тяжеловесные страницы будут шустрее на этапе         // первоначальной загрузке.
 ## MEMORY REDUCTION 
     browser.cache.memory.capacity = xx
 	//Limit memory cache size. (xx = value in MB)
