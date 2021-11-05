@@ -269,7 +269,8 @@ It is possible to add sites to the list of exceptions – the plugins you instal
       //It's likely your browser is already set to use these features.
       //May introduce instability on some hardware.
     webgl.disabled = true 
-    gfx.webrender.all = true  //New GPU renderer written in Rust - [Beta]
+    gfx.webrender.all = true  //New GPU renderer written in Rust*
+    gfx.webrender.software = true // realization CPU* renderer in Rust* 
       // 1.2 Первичная отрисовка "скелета" интерфейса до реального отображения окна браузера 
       // https://www.ghacks.net/2021/01/25/firefox-nightly-uses-a-new-skeleton-ui-on-start-on-windows/
     browser.startup.preXulSkeletonUI = true
