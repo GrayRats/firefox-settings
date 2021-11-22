@@ -160,9 +160,8 @@ It is possible to add sites to the list of exceptions – the plugins you instal
     browser.urlbar.trimURL = true 
     network.dns.disablePrefetch = true  //Установив значение «True» для данного параметра, запрет на «предварительную выборку» DNS.
 
-    network.prefetch-next = false  
-
-       //Аналогично предварительная выборка DNS от Mozilla.
+    network.prefetch-next = false  //Аналогично предварительная выборка DNS от Mozilla.
+    ui.systemUses = true
        
     media.peerconnection.enabled = false //(WebRTC) [Not Recommended]
     network.websocket.enabled = false
