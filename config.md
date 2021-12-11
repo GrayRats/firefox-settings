@@ -1,4 +1,5 @@
 [Firefox configuration Hardening secyrity](https://github.com/pyllyukko/user.js) 
+
 [Firefox configuration Security](https://github.com/w008/ghacks-user.js)
 ##### Список ломающихся от применения настроек сайтов
 
