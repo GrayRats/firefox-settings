@@ -128,3 +128,47 @@
 * [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/)
 <sup>WE, E10S</sup>
 Аналог Ghostery от EFF. Актуально для тех, кто хочет поставить и забыть, чтоб оно там автоматом боролось с трекингом.
+
+
+YouTube + uBlock Origin
+ Убираем визуальный и мешающий мусор из окна плеера Youtube. Официально этот мусор не отключается. Мусор такой как - всплывающие окна на паузе. (Дико раздражает, когда поставил на паузу и пытаешься рассмотреть что либо в видео) Так же убирается вплывающие окна в под конец и во время видео с подписками, другими видео и прочим "нужным" контентом. (Подборка видео после полного окончания ролика остаются)Текст ниже копируем, идём в настройки uBlock Origin. "Параметры > Мои фильтры". Вставляем скопированное.
+```
+youtube.com/##.ytp-ce-element.ytp-ce-channel.ytp-ce-channel-this
+youtube.com/##.ytp-ce-element.ytp-ce-video.ytp-ce-element-show
+youtube.com/##.ytp-ce-element.ytp-ce-bottom-right-quad.ytp-ce-size-640
+youtube.com##.ytp-ce-covering-overlay
+youtube.com##.ytp-ce-element-shadow
+youtube.com##.ytp-ce-covering-image
+youtube.com##.ytp-ce-expanding-image
+youtube.com##.ytp-pause-overlay
+youtube.com##.ytp-scroll-min.ytp-pause-overlay
+youtube.com##.iv-click-target
+youtube.com##.ytp-cards-button
+youtube.com##.ytp-cards-teaser
+youtube.com##.ytp-ce-covering-image
+youtube.com##.ytp-ce-covering-overlay
+youtube.com##.ytp-ce-element
+youtube.com##.ytp-ce-element-shadow
+```
+Ну и финальное расширение от Гугла - это естественно SponsorBlock для YouTube. Данная улита позволяет убрать встроенную рекламу внутри ролика на YouTube. Потрясающая и простая вещь.
+
+Убираем рекламу и спам на телефоне. Android.
+
+Скачиваем программу AdGuard с оф. сайта. https://adguard.com/ru/download.html?os=android&ref=dtf.ru 
+Настраиваем работу батареи, чтобы программа не отключалась в фоновом режиме: https://kb.adguard.com/ru/android/solving-problems/background-work?ref=vc.ru
+
+Полностью рекламу в браузере удаляет и бесплатная версия. В приложениях она тоже убирает часть рекламы, но не всегда. Напомню, что с плей маркета, приложение AdGuard НЕ работает уже 2 года! Убирает рекламу на 99% в браузерах Google Chrome, Vivaldi, Brave. В Mozilla Firefox нужно добавить сертификат, чтобы они совместно работали. В браузерах Яндекс и Opera не блокирует на страничках яндекса.
+
+И) Приложение YouTube Vanced без рекламы и с фоновым режимом для Android+ SponsorBlock+ бесплатный YouTube Music. (Для iPhone такой программы естественно нет)
+
+
+Приложении "Почта Яндекс".
+Заходим в настройки и убираем ползунок "Показывать рекламу"
+
+
+Для телевизора или приставки на платформе Android
+
+1. Smart YouTube TV
+https://smartyoutubetv.github.io/ru/?ref=vc.ru
+2. YouTube Vanced.
+
