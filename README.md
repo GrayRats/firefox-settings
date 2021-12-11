@@ -1,4 +1,9 @@
 # Firefox Advanced Settings
+* [Список продвинутых аддонов](addonlist.md)
+* [Серый список аддонов](greylist.md)
+* [Серый список аддонов](greylist.md)
+* [Настройки About:Config](config.md)
+
 
 Firefox advanced settings for increased privacy and security.
 
