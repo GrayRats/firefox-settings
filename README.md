@@ -80,6 +80,10 @@
 1. **Q:** Как добавить поисковик в браузер? <br>
 **A:** Экспортировать встроенные [скриптом](https://gist.github.com/nohamelin/6af8907ca2dd90a9c870629c396c9521), создать по их образу и подобию новый файл в формате [OpenSearch](https://developer.mozilla.org/en-US/docs/Web/OpenSearch), затем импортировать другим [скриптом](https://gist.github.com/nohamelin/8e2e1b50dc7d97044992ae981487c6ec).
 
+ **Q:** Как Убрать На вкладках Кнопку закрытия (крестик на каждой вкладке)
+**A:** в UserChrome.css, Добавить в этот файл следующий код
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+#tabbrowser-tabs .tabbrowser-tab .tab-close-button  {  display:none!important;  } 
 
 ## Интересные ссылки
 * [Release Notes](https://www.mozilla.org/en-US/firefox/notes) и [Developer Release Notes](https://developer.mozilla.org/en-US/Firefox/Releases).
