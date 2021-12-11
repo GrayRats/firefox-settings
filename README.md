@@ -20,7 +20,7 @@ It is possible to add sites to the list of exceptions – the plugins you instal
     // Use DoH without fallback to insecure DNS
     network.trr.mode → 3
 
-    network.trr.uri = <sup>https://dns.east.comss.one/dns-query</sup> // Use your prefered DoH server
+    network.trr.uri = https://dns.east.comss.one/dns-query // Use your prefered DoH server
 ## DNS-over-HTTPS
 DOH - <sup>https://GitHub.com/curl/curl/wiki/DNS-over-HTTPS and https://www.comss.ru/list.php?c=securedns</sup>
 TEST DOH - <sup>https://www.cloudflare.com/ssl/encrypted-sni/</sup>
