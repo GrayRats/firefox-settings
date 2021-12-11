@@ -4,6 +4,9 @@
 
 * [Custom CSS tweaks for Firefox 57+](https://github.com/Aris-t2/CustomCSSforFx). Сборник различных стилей от автора аддона Classic Theme Restorer.
 
+* [Custom CSS tweaks for Firefox 57+](https://github.com/black7375/Firefox-UI-Fix)
+
+https://github.com/darsain/uosc стиль mpv
 #### О написании собственных стилей
 
 В качестве изкоробочной альтернативы меняющим стили аддонам, можно использовать файлы [userChrome.css](http://kb.mozillazine.org/UserChrome.css) и [userContent.css](http://kb.mozillazine.org/UserContent.css). Если редактировать их из [Browser Toolbox](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox), изменения вступают в силу без перезапуска браузера. Также через Browser Toolbox удобно инспектировать элементы интерфейса самого браузера.
