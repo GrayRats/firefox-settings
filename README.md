@@ -7,7 +7,7 @@
 
 Firefox advanced settings for increased privacy and security.
 
-(!) Be careful.
+<sup>!</sup> Be careful.
  
 Changing some settings can drastically change the format of  web browsing pages and lead to an error when loading some  websites. 
 Thus, step-by-step changes to settings - is the best approach to modifying the browser. 
@@ -21,7 +21,8 @@ It is possible to add sites to the list of exceptions – the plugins you instal
     network.trr.mode → 3
 
     network.trr.uri = https://dns.east.comss.one/dns-query // Use your prefered DoH server
-## WIKI DNS-over-HTTPS - https://GitHub.com/curl/curl/wiki/DNS-over-HTTPS and https://www.comss.ru/list.php?c=securedns ,TEST DOH https://www.cloudflare.com/ssl/encrypted-sni/
+## WIKI DNS-over-HTTPS - <sup>https://GitHub.com/curl/curl/wiki/DNS-over-HTTPS and https://www.comss.ru/list.php?c=securedns 
+TEST DOH https://www.cloudflare.com/ssl/encrypted-sni/</sup>
     network.trr.useGET → true
     network.security.esni.enabled → true
 
@@ -66,10 +67,10 @@ It is possible to add sites to the list of exceptions – the plugins you instal
 
     // Значения: 0=Отключено, 1=Включено (по-умолчанию), 2=Только для сайтов с EV сертификатом
 
-    // (!)Данная настройка снижает вашу анонимность, но необходима для безопасности
+    // <sup>!</sup>Данная настройка снижает вашу анонимность, но необходима для безопасности
     user_pref("security.OCSP.enabled", 1);
     // 7.5 Сайты не будут загружаться без получения подтверждения через OCSP
-    // (!!!) Настройка очень полезна для повышения уровня безопасности, но 
+    // <sup>!!!</sup> Настройка очень полезна для повышения уровня безопасности, но 
     // часто ломает DNS over HTTPS в портативных и стабильных версиях Firefox
     // Включайте самостоятельно, смотрите, как будет работать лично у вас
     //user_pref("security.OCSP.require", true);
@@ -168,7 +169,7 @@ It is possible to add sites to the list of exceptions – the plugins you instal
     network.prefetch-next = false  //Аналогично предварительная выборка DNS от Mozilla.
     ui.systemUses = true extensions.translations.disabled = false
        
-    media.peerconnection.enabled = false //(WebRTC) [Not Recommended]
+    media.peerconnection.enabled = false //(WebRTC) <sup>[Not Recommended]</sup>
     network.websocket.enabled = false
     //WebSockets is a technology that makes it possible to open an interactive communication 
     //session between the user's browser and a server. (May leak IP when using proxy/VPN)
@@ -276,7 +277,7 @@ It is possible to add sites to the list of exceptions – the plugins you instal
     gfx.webrender.all = true  //New GPU renderer written in Rust*
     gfx.webrender.software = true // realization CPU* renderer in Rust* 
       // 1.2 Первичная отрисовка "скелета" интерфейса до реального отображения окна браузера 
-      // https://www.ghacks.net/2021/01/25/firefox-nightly-uses-a-new-skeleton-ui-on-start-on-windows/
+      // <sup>https://www.ghacks.net/2021/01/25/firefox-nightly-uses-a-new-skeleton-ui-on-start-on-windows/</sup>
     browser.startup.preXulSkeletonUI = true
      // Ленивая загрузка ранее открытых вкладок после перезапуска браузера
      browser.sessionstore.restore_on_demand = true 
@@ -288,7 +289,7 @@ It is possible to add sites to the list of exceptions – the plugins you instal
 	//Limit memory cache size. (xx = value in MB)
 	
     browser.sessionhistory.max_entries = xx
-	//Limit maximum pages in session history. (how many URLs you can traverse using the Forward or Back button)
+	//Limit maximum pages in session history. <sup>(how many URLs you can traverse using the Forward or Back button)</sup>
 	
     browser.sessionstore.max_tabs_undo = xx
 	//Limit max closed tabs you can reopen.
@@ -321,16 +322,16 @@ js Firefox hardening https://github.com/ghacksuserjs/ghacks-user.js.
 Как написано на их странице GitHub,
 это «файл конфигурации, который поможет управлять сотнями настроек 
 Firefox». Для получения более подробной информации о нем вы можете 
-перейти по данной  ссылке https://github.com/ghacksuserjs/ghacks-user.js/wiki.
+перейти по данной  ссылке <sup>https://github.com/ghacksuserjs/ghacks-user.js/wiki</sup>
    
-Privacy Settings https://addons.mozilla.org/firefox/addon/privacy-settings/.
+Privacy Settings <sup>https://addons.mozilla.org/firefox/addon/privacy-settings/</sup>
 Это дополнение Firefox, которое предоставляет вам легкий доступ и 
 контроль над встроенными настройками конфиденциальности в браузере.
   
-Firefox Profilemaker https://ffprofile.com/.FFprofile поможет вам создать профиль Firefox с настройками конфиденциальности и безопасности в соответствии с вашими потребностями.
+Firefox Profilemaker <sup>https://ffprofile.com/.FFprofile</sup> поможет вам создать профиль Firefox с настройками конфиденциальности и безопасности в соответствии с вашими потребностями.
 // Отсоединить вкладку, перетащив ее из окна/Detach a tab by dragging it out of the window 
   user_pref( "browser.tabs.allowTabDetach", true);
-///
+//
    user_pref("browser.proton.doorhangers.enabled", true);
    user_pref("browser.proton.infobars.enabled", true);
    user_pref("browser.proton.places-tooltip.enabled", true);
