@@ -287,7 +287,7 @@ TEST DOH - <sup>https://www.cloudflare.com/ssl/encrypted-sni/</sup>
     установить network.process.enabled = true //Remote processes.Обращение к сети будет вынесено в отдельный процесс ,как следствие, тяжеловесные страницы будут шустрее на этапе         // первоначальной загрузке.
 ## MEMORY REDUCTION 
     browser.cache.memory.capacity = xx
-	//Limit memory cache size. (xx = value in MB)
+	//Limit memory cache size (<sup>xx = value in MB</sup>)
 	
     browser.sessionhistory.max_entries = xx
 	//Limit maximum pages in session history. <sup>(how many URLs you can traverse using the Forward or Back button)</sup>
