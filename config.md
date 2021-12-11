@@ -1,3 +1,5 @@
+[Firefox configuration Hardening secyrity](https://github.com/pyllyukko/user.js) 
+[Firefox configuration Security](https://github.com/w008/ghacks-user.js)
 ##### Список ломающихся от применения настроек сайтов
 
 * Спуфинг заголовка Referer -- Avito.ru (показ телефонов), сервисы Яндекса (при использовании вместе с Decentraleyes), qiwi.com (авторизация), simplenote.com (авторизация), rapidgator.net (капча).
