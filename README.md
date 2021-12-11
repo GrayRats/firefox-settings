@@ -5,6 +5,7 @@
 * [CSS Стили Интерфейса](Styles.md)
 * [Настройки About:Config](config.md)
 ## FAQ
+[FF-90+FAQ](https://github.com/perdolka/FF) 
 
 <sub>Настройки меняются через `about:config`.</sub>
 
