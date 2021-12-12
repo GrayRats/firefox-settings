@@ -13,8 +13,23 @@
 * `general.useragent.override` -- Неправдоподобно выглядящий useragent ломает maps.yandex.ru и много что еще.
 * `svg.disabled` -- youtube.com (плеер).
 * 
+[ ]( ) 
 
 
+Запрет OffscreenCanvas. Этот механизм обеспечивает возможность выполнения отрисовки через WebGL в отдельном потоке. Запуск WebGL в отдельном потоке производится с помощью API OffscreenCanvas, добавленного в систему Workers, предоставляющую средства для фонового выполнения длительных JavaScript-операций (даже при уже закрытом приложении!) Для отключения установите: [dev.mozilla](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) `gfx.offscreencanvas.enabled` = false — Включая,>вы защищаете себя от нагрузки WebGL. (FF 44 и выше)
 
-Запрет OffscreenCanvas. Этот механизм обеспечивает возможность выполнения отрисовки через WebGL в отдельном потоке. Запуск WebGL в отдельном потоке производится с помощью API OffscreenCanvas, добавленного в систему Workers, предоставляющую средства для фонового выполнения длительных JavaScript-операций (даже при уже закрытом приложении!) Для отключения установите:
-`gfx.offscreencanvas.enabled` = false (FF 44 и выше) Включая вы защищаете себя от нагрузки WebGL
+Запрет автопроигрывания мультимедийного содержимого:
+`media.autoplay.enabled`=false
+`media.audio_data.enabled`=false (настройка может отсутствовать или устареть)
+
+
+Отключение медиакодеков:
+`media.ogg.enabled`
+`media.opus.enabled`
+`media.raw.enabled`
+`media.wave.enabled`
+`media.webm.enabled`
+`media.webvtt.enabled`
+`media.webaudio.enabled`(настройка может отсутствовать или устареть)
+`media.fragmented-mp4.gmp.enabled`
+`media.fragmented-mp4.enabled`   (настройка может отсутствовать или устареть)
