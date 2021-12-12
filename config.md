@@ -24,12 +24,21 @@
 
 
 Отключение медиакодеков:
+
 `media.ogg.enabled`
+
 `media.opus.enabled`
+
 `media.raw.enabled`
+
 `media.wave.enabled`
+
 `media.webm.enabled`
+
 `media.webvtt.enabled`
+
 `media.webaudio.enabled`(настройка может отсутствовать или устареть)
+
 `media.fragmented-mp4.gmp.enabled`
+
 `media.fragmented-mp4.enabled`   (настройка может отсутствовать или устареть)
