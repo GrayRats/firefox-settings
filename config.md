@@ -1,6 +1,37 @@
 [Firefox configuration Security-hardening 2021](https://github.com/pyllyukko/user.js) 
 
 [Firefox configuration Security](https://github.com/w008/ghacks-user.js)
+
+
+
+
+
+ 
+КЭШИРОВАНИЕ В RAM:
+
+Внимание: Разрешение кэширования в оперативную память может привести к отслеживанию браузера по "цифровым отпечаткам", создаваемым при помощи E-Tag!
+
+Разрешение хранения кэша в оперативной памяти (в том числе и данных, полученных по шифрованным SSL-соединениям):
+
+browser.cache.memory.enable=true
+
+http://kb.mozillazine.org/Browser.cache.memory.enable
+
+Внимание: Кэширование данных в RAM (`browser.cache.memory.enable`=true) НЕ будет работать, если кэширование запрещено глобально (`network.http.use-cache`=false)
+
+Определение количества оперативной памяти, выделяемой под кэш (в зависимости от общего объема RAM):
+
+`browser.cache.memory.capacity`=-1 (автоматическое определение; рекомендуется)
+
+Допустимые значения:
+
+0 - оперативная память не используется (не рекомендуется; см. примечание ниже);
+
+n (целое цифровое значение) - количество килобайт, выделенных на кэш.
+
+Примечание: Требует `browser.cache.memory.enable`=true
+
+
 ##### Список ломающихся от применения настроек сайтов
 
 * Спуфинг заголовка Referer -- Avito.ru (показ телефонов), сервисы Яндекса (при использовании вместе с Decentraleyes), qiwi.com (авторизация), simplenote.com (авторизация), rapidgator.net (капча).
@@ -14,9 +45,39 @@
 * `svg.disabled` -- youtube.com (плеер).
 * 
 [ ]( ) 
+Запрет отправки beacon - специфических HTTP-данных, утекающих от юзерагента на сервер, особенно при покидании страницы:
+
+`beacon.enabled`=false 
 
 
 Запрет OffscreenCanvas. Этот механизм обеспечивает возможность выполнения отрисовки через WebGL в отдельном потоке. Запуск WebGL в отдельном потоке производится с помощью API OffscreenCanvas, добавленного в систему Workers, предоставляющую средства для фонового выполнения длительных JavaScript-операций (даже при уже закрытом приложении!) Для отключения установите: [dev.mozilla](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) `gfx.offscreencanvas.enabled` = false — Включая,>вы защищаете себя от нагрузки WebGL. (FF 44 и выше)
+
+учная настройка адресов и портов HTTP, SSL, FTP-соединений в режиме "network.proxy.type=1"
+
+HTTP:
+
+network.proxy.http=localhost
+network.proxy.http_port=8118
+
+SSL:
+
+network.proxy.ssl=localhost
+network.proxy.ssl_port=8118
+
+FTP:
+
+network.proxy.ftp=localhost
+network.proxy.ftp_port=8118
+
+
+Отключение гипотетически уязвимых алгоритмов, используемых для защищенных соединений с серверами по SSL3:
+
+security.ssl3.ecdhe_ecdsa_rc4_128_sha=false
+security.ssl3.ecdhe_rsa_rc4_128_sha=false
+security.ssl3.rsa_rc4_128_md5=false
+security.ssl3.rsa_rc4_128_sha=false
+security.ssl3.rsa_des_ede3_sha=false
+
 
 Запрет автопроигрывания мультимедийного содержимого:
 `media.autoplay.enabled`=false
@@ -42,3 +103,17 @@
 `media.fragmented-mp4.gmp.enabled`
 
 `media.fragmented-mp4.enabled`   (настройка может отсутствовать или устареть)
+
+
+
+
+
+## WORKERS
+
+Запрет Web Workers - средства для фонового выполнения длительных JavaScript-операций (FF 44 и выше). Данный сервис перехватывает сетевую активность средствами Service Workers. Обработчики сообщений, получаемых от сервера, действуют, даже когда страница с web-приложением закрыта или неактивна, и не зависят от времени жизни приложения. Это сильно нагружает ресурсы системы и занимает большую часть оперативной памяти. Для отключения установите:
+
+dom.serviceWorkers.enabled=false
+dom.workers.enabled=false
+dom.workers.websocket.enabled=false
+
+https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
