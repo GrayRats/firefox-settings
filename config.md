@@ -13,3 +13,8 @@
 * `general.useragent.override` -- Неправдоподобно выглядящий useragent ломает maps.yandex.ru и много что еще.
 * `svg.disabled` -- youtube.com (плеер).
 * 
+
+
+
+Запрет OffscreenCanvas. Этот механизм обеспечивает возможность выполнения отрисовки через WebGL в отдельном потоке. Запуск WebGL в отдельном потоке производится с помощью API OffscreenCanvas, добавленного в систему Workers, предоставляющую средства для фонового выполнения длительных JavaScript-операций (даже при уже закрытом приложении!) Для отключения установите:
+`gfx.offscreencanvas.enabled=false (FF 44 и выше)`
