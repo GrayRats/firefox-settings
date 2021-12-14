@@ -4,7 +4,7 @@
 
 
 
-
+'media.audiograph.single_thread.enabled' звук в один треад  интерфейсов обработки звука,Windows.Media.Audio 
 
 `browser.sessionstore.interval` = хотяб 60000 (60 секунд между записью файла сессии вкладок)
 `network.cookie.cookieBehavior` = 1
