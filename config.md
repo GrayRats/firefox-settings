@@ -6,6 +6,23 @@
 
 
 
+browser.sessionstore.interval хотяб 60000 (60 секунд между записью файла сессии вкладок)
+network.cookie.cookieBehavior 1
+
+Убирание задержки фулскрина видео:
+
+'full-screen-api.transition-duration.enter;0 0'
+'full-screen-api.transition-duration.leave;0 0'
+'full-screen-api.warning.delay;-1'
+'full-screen-api.warning.timeout;0'
+
+На вкус после хромых:
+
+'layout.word_select.eat_space_to_next_word'
+'browser.tabs.insertAfterCurrent'
+'middlemouse.scrollbarPosition'
+
+
  
 КЭШИРОВАНИЕ В RAM:
 
@@ -43,7 +60,7 @@ n (целое цифровое значение) - количество кило
 * `geo.enabled` -- citilink.ru (панель фильтров).
 * `general.useragent.override` -- Неправдоподобно выглядящий useragent ломает maps.yandex.ru и много что еще.
 * `svg.disabled` -- youtube.com (плеер).
-* 
+* 'privacy.resistFingerprinting' = false  -- часто ломает защищенных cdn сайтов. 
 [ ]( ) 
 Запрет отправки beacon - специфических HTTP-данных, утекающих от юзерагента на сервер, особенно при покидании страницы:
 
