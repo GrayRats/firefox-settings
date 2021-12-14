@@ -7,6 +7,9 @@
 ## FAQ
 [FF-90+FAQ](https://github.com/perdolka/FF) 
 
+privacy.resistFingerprinting = false = ломает сайты 
+
+
 <sub>Настройки меняются через `about:config`.</sub>
 
 1. **Q:** Проблемы с отрисовкой интерфейса, изображений или видео. Внезапные падения браузера.<br>
