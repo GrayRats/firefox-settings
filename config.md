@@ -106,7 +106,7 @@ security.ssl3.rsa_des_ede3_sha=false
 
 
 
-
+privacy.resistFingerprinting = ломает
 
 ## WORKERS
 
