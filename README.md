@@ -7,6 +7,10 @@
 ## FAQ
 [FF-90+FAQ](https://github.com/perdolka/FF) 
 
+
+[FF-95+Руководство](https://digdeeper.neocities.org/ghost/mozilla_rus.html) 
+
+
 privacy.resistFingerprinting = false = ломает сайты 
 
 
