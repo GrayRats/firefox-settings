@@ -11,6 +11,8 @@
 [FF-95+Руководство](https://digdeeper.neocities.org/ghost/mozilla_rus.html) 
 
 
+[FF-mz.policy](https://github.com/mozilla/policy-templates/blob/v3.5/README.md)
+
 privacy.resistFingerprinting = false = ломает сайты 
 
 
