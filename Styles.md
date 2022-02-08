@@ -87,3 +87,7 @@ layout.spellcheckDefault
     2 – включение проверки правописания для всех текстовых полей
 
 
+```
+widget.non-native-theme.scrollbar.style
+```
+
