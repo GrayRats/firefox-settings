@@ -5,6 +5,8 @@
 * [Custom CSS tweaks for Firefox 57+](https://github.com/Aris-t2/CustomCSSforFx). Сборник различных стилей от автора аддона Classic Theme Restorer.
 
 * [Lepton-Proton Fix)](https://github.com/black7375/Firefox-UI-Fix)
+* 
+* [Темы_Frefofx)](https://addons.mozilla.org/en-GB/firefox/user/14324164/)
 
 https://github.com/darsain/uosc стиль mpv
 #### О написании собственных стилей
