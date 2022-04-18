@@ -13,8 +13,12 @@
 
 [FF-mz.policy](https://github.com/mozilla/policy-templates/blob/v3.5/README.md)
 
-privacy.resistFingerprinting = false = ломает сайты 
+`privacy.resistFingerprinting` = false = ломает сайты 
 
+
+Error code: MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
+
+`security.cert_pinning.enforcement_level` = 0 = ломает сайты 
 
 <sub>Настройки меняются через `about:config`.</sub>
 
