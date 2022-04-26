@@ -7,6 +7,7 @@
 ## FAQ
 [FF-90+FAQ](https://github.com/perdolka/FF) 
 
+[FF-90+CSS](https://github.com/Aris-t2/CustomCSSforFx) 
 
 [FF-95+Руководство](https://digdeeper.neocities.org/ghost/mozilla_rus.html) 
 
@@ -21,6 +22,7 @@ Error code: MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
 `security.cert_pinning.enforcement_level` = 0 = ломает сайты 
 
 <sub>Настройки меняются через `about:config`.</sub>
+
 
 1. **Q:** Проблемы с отрисовкой интерфейса, изображений или видео. Внезапные падения браузера.<br>
 **A:** Попробуйте отключить аппаратное ускорение: `layers.acceleration.disabled -> true` <br>
