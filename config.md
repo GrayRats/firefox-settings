@@ -9,7 +9,7 @@
 `browser.sessionstore.interval` = хотяб 60000 (60 секунд между записью файла сессии вкладок)
 `network.cookie.cookieBehavior` = 1
 
-Убирание задержки фулскрина видео:
+Убирание задержки анимации фулскрина видео:
 
 `full-screen-api.transition-duration.enter;0 0`
 `full-screen-api.transition-duration.leave;0 0'
@@ -123,7 +123,12 @@ security.ssl3.rsa_des_ede3_sha=false
 
 privacy.resistFingerprinting = ломает
 
-## WORKERS
+## Приватные запросы URL Cтрок
+
+`privacy.query_stripping.enabled` = true 
+`privacy.query_stripping.strip_list` черый список URL Cтрок:Query Parameter Stripping или Очистка параметров запроса.
+
+### WORKERS
 
 Запрет Web Workers - средства для фонового выполнения длительных JavaScript-операций (FF 44 и выше). Данный сервис перехватывает сетевую активность средствами Service Workers. Обработчики сообщений, получаемых от сервера, действуют, даже когда страница с web-приложением закрыта или неактивна, и не зависят от времени жизни приложения. Это сильно нагружает ресурсы системы и занимает большую часть оперативной памяти. Для отключения установите:
 
