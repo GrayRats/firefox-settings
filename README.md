@@ -9,6 +9,8 @@
 
 [FF-90+CSS](https://github.com/Aris-t2/CustomCSSforFx) 
 
+[FF-User.js farag2]([https://github.com/Aris-t2/CustomCSSforFx](https://github.com/farag2/Mozilla-Firefox/blob/master/user.js)) 
+
 [FF-95+Руководство](https://digdeeper.neocities.org/ghost/mozilla_rus.html) 
 
 
