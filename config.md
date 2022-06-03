@@ -121,7 +121,7 @@ security.ssl3.rsa_des_ede3_sha=false
 
 
 
-privacy.resistFingerprinting = ломает
+`privacy.resistFingerprinting` = ломает сайтов, индицикацию пользователя.
 
 ## Приватные запросы URL Cтрок
 
