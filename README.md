@@ -25,6 +25,9 @@ Error code: MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
 
 <sub>Настройки меняются через `about:config`.</sub>
 
+[Производительность] API WebGPU и язык шейдеров WGSL (WebGPU Shading Language) выполнения операций 3D* JavaScript API на стороне GPU.
+`dom.webgpu.enable`
+`gfx.webgpu.force-enabled`
 
 1. **Q:** Проблемы с отрисовкой интерфейса, изображений или видео. Внезапные падения браузера.<br>
 **A:** Попробуйте отключить аппаратное ускорение: `layers.acceleration.disabled -> true` <br>
