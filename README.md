@@ -4,7 +4,7 @@
 * [Серый список аддонов](greylist.md)
 * [CSS Стили Интерфейса](Styles.md)
 * [Настройки About:Config](config.md)
-## FAQ
+## **FAQ**
 [FF-90+FAQ](https://github.com/perdolka/FF) 
 
 [FF-90+CSS](https://github.com/Aris-t2/CustomCSSforFx) 
@@ -23,9 +23,10 @@ Error code: MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
 
 `security.cert_pinning.enforcement_level` = 0 = ломает сайты 
 
-<sub>Настройки меняются через `about:config`.</sub>
+<sub>Настройки меняются через`about:config.</sub>
 
-[Производительность] API WebGPU и язык шейдеров WGSL (WebGPU Shading Language) выполнения операций 3D* JavaScript API на стороне GPU.
+**[Производительность]** API WebGPU и язык шейдеров WGSL (WebGPU Shading Language) выполнения операций 3D* JavaScript API на стороне GPU.
+
 `dom.webgpu.enable`
 `gfx.webgpu.force-enabled`
 
