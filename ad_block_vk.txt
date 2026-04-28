@@ -1,10 +1,10 @@
 !
-! Version: 3.19
+! Version: 4.00
 ! Title: Расширенный фильтр для ВКонтакте
-! Homepage: https://vtosters.app
+! Homepage: https://github.com/GrayRats/firefox-settings/edit/main/ad_block_vk.txt
 ! Last modified: 13 October 2024 18:46
 ! Description: Фильтр рекламы и слежки на vk.com/vk.ru. Фильтр рассчитан и для m.vk.com/m.vk.ru
-! Expires: 24 hours (update frequency)
+! Expires: 180 hours (update frequency)
 ! Issues: https://github.com/vtosters/adblock/issues 
 ! Syntax: uBlock Origin 
 !
